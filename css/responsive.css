@@ -1,0 +1,293 @@
+@media (min-width:1200px) and (max-width: 1500px) {
+    img.app-shape-02 {
+        position: absolute;
+        right: 69px;
+        /* top: 20px; */
+        bottom: 20%;
+    }
+
+    .feature-img2 {
+        display: none;
+    }
+
+    .app-main {
+        left: -28px;
+        margin-left: -73px;
+    }
+
+
+}
+
+@media (min-width:992px) and (max-width: 1200px) {
+    .feature-img2 {
+        display: none;
+    }
+
+    .slider-img {
+
+        display: none;
+    }
+
+    .main-menu ul li {
+        margin: 0 6px;
+    }
+
+    .main-menu {
+        margin-top: -54px;
+    }
+
+    .header-btn a {
+        margin-top: -70px;
+    }
+
+    .slider-area {
+        min-height: 1060px;
+        background-position: top left;
+        background-position: center center;
+    }
+
+    .subscribe-form button {
+        position: absolute;
+        top: 6px;
+        left: 71%;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+
+
+}
+
+
+@media (min-width:768px) and (max-width: 991px) {
+
+
+    nav .menu {
+        display: none;
+    }
+
+    .mobile-menu span {
+        display: block;
+
+    }
+
+    .header-btn a {
+        display: none;
+    }
+
+    .main-menu ul li a {
+        display: ;
+    }
+
+    .slider-img {
+        display: none;
+    }
+
+    .slider-content-space {
+        padding-top: 202px;
+    }
+
+
+    .shape-01 {
+        display: none;
+    }
+
+    .slider-area {
+        min-height: 896px;
+        background-position: center center;
+    }
+
+    .shape-02 {
+        bottom: 8%;
+        left: 49%;
+    }
+
+    .feature-img2 {
+        display: none;
+    }
+
+    .section-title p {
+        font-size: 21px;
+    }
+
+    .works-text h2 {
+        font-size: 39px;
+        padding-right: 156px;
+        margin-bottom: 20px;
+    }
+
+    .works-text p {
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
+    .works-text h2 {
+        margin-bottom: 20px;
+        margin-top: 63px;
+    }
+
+    .work-img2 {
+        margin-top: 80px;
+    }
+
+    .work-img {
+        margin-bottom: -70px;
+    }
+
+    .faq-img {
+        margin-bottom: 60px;
+    }
+
+    .latest-blog-img img {
+        width: 100%;
+    }
+
+    .latest-blog-content {
+        margin-top: -50px;
+        position: relative;
+        z-index: 999;
+        padding: 0 30px;
+        margin-bottom: 40px;
+    }
+
+    .subscribe-form button {
+        position: absolute;
+        top: 6px;
+        left: 59%;
+    }
+
+
+}
+
+@media (min-width: 576px){
+    .col-sm-12 {
+    -webkit-box-flex: 0!important;
+    -ms-flex: 0 0 100%!important;
+    flex: 0 0 100%!important;
+    max-width: 100%!important;
+}
+}
+
+@media (max-width: 767px) {
+
+    .slider-img {
+        display: none;
+    }
+
+    .main-menu ul li {
+        display: none;
+    }
+
+    .shape-02 {
+        bottom: 1%;
+        left: 42%;
+    }
+
+    .slider-area {
+        min-height: 746px;
+        background-position: center center;
+    }
+
+    .slider-content-space {
+        padding-top: 200px;
+    }
+
+    .shape-01 {
+        display: none;
+    }
+
+    .slider-text h2 {
+        font-size: 33px;
+        line-height: 44px;
+    }
+
+    .slider-text p {
+        font-size: 19px;
+        line-height: 32px;
+    }
+
+    .btns {
+        font-size: 16px;
+        padding: 18px 28px;
+    }
+
+    .single-counter {
+        margin-bottom: 40px;
+    }
+
+    .feature-img2 {
+        margin-left: 1310px;
+        margin-top: -101px;
+        display: none;
+    }
+
+    .features-icon {
+        margin-top: 20px;
+    }
+
+    .features-section {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+
+    .video-wrapper {
+        background: url(../img/video/videobg.png);
+        min-height: 600px;
+        -webkit-box-shadow: 0px 0px 136px 0px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 0px 136px 0px rgba(0, 0, 0, 0.06);
+        background-position: center center;
+    }
+
+    .works-text h2 {
+        font-size: 29px;
+        line-height: 37px;
+        margin-top: 45px;
+    }
+
+    .work-img2 {
+        margin-top: 70px;
+    }
+
+    .testimonial-active p {
+        font-size: 18px;
+    }
+
+    .question {
+        margin-top: 41px;
+    }
+
+    .inner-blog {
+        margin-bottom: 40px;
+    }
+
+    .subscribe-form button {
+        position: static;
+    }
+
+    .subscribe-form input {
+        margin-bottom: 20px;
+    }
+
+    .btns {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+
+    .availabel-text h2 {
+        font-size: 33px;
+    }
+
+    .availabel-btn a {
+        margin-bottom: 30px;
+    }
+
+
+
+
+}
+
+
+@media (max-width: 575px) {}
