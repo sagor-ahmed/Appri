@@ -46,22 +46,47 @@
         background-position: center center;
     }
 
-    .subscribe-form button {
-        position: absolute;
-        top: 6px;
-        left: 71%;
-    }
-
     .header-btn {
         display: none;
     }
 
+    .subscribe-space h2 {
+        padding-bottom: 40px;
+        text-align: center;
+    }
 
 
 }
 
 
 @media (min-width:768px) and (max-width: 991px) {
+
+    .single-features.text-center {
+        margin-bottom: 40px;
+    }
+
+    .price-box {
+        margin-bottom: 40px;
+    }
+
+    .features-section {
+        padding-bottom: 0;
+    }
+
+    .faq-area {
+        padding-bottom: 0;
+    }
+
+    .subscribe-space h2 {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .slider-btn a {
+        margin-bottom: 15px;
+    }
+
+
 
 
     nav .menu {
@@ -152,25 +177,72 @@
         margin-bottom: 40px;
     }
 
-    .subscribe-form button {
-        position: absolute;
-        top: 6px;
-        left: 59%;
+    header .fixed-nav {
+        padding: 0px 20px;
     }
 
-
+    .logo {
+        padding: 13px 0;
+    }
 }
 
-@media (min-width: 576px){
-    .col-sm-12 {
-    -webkit-box-flex: 0!important;
+
+@media (max-width: 767px) {
+    .single-features.text-center {
+        margin-bottom: 40px;
+    }
+.col-sm-12 {
     -ms-flex: 0 0 100%!important;
+    -webkit-box-flex: 0!important;
     flex: 0 0 100%!important;
     max-width: 100%!important;
 }
-}
+    .price-box {
+        margin-bottom: 40px;
+    }
 
-@media (max-width: 767px) {
+    .features-section {
+        padding-bottom: 0;
+    }
+
+    .faq-area {
+        padding-bottom: 0;
+    }
+
+    .subscribe-space h2 {
+        padding-bottom: 40px;
+        text-align: left;
+    }
+
+    .slider-btn a {
+        margin-bottom: 15px;
+    }
+
+    .latest-blog-img img {
+        width: 100%;
+    }
+
+    .brand-active img {
+        margin-right: 20px;
+        width: 200px !important;
+        display: inline-block !important;
+    }
+
+    .logo {
+        padding: 13px 0;
+    }
+
+    header .fixed-nav {
+        padding: 0px 20px;
+    }
+
+    .header-btn a {
+        display: none;
+    }
+
+    .single-features.text-center {
+        margin-bottom: 40px;
+    }
 
     .slider-img {
         display: none;
@@ -199,7 +271,7 @@
     }
 
     .slider-text h2 {
-        font-size: 33px;
+        font-size: 36px;
         line-height: 44px;
     }
 
@@ -241,7 +313,7 @@
     }
 
     .works-text h2 {
-        font-size: 29px;
+        font-size: 36px;
         line-height: 37px;
         margin-top: 45px;
     }
@@ -284,10 +356,12 @@
         margin-bottom: 30px;
     }
 
-
+    .testimonial-img-active {
+        width: 100%;
+    }
 
 
 }
 
 
-@media (max-width: 575px) {}
+@media (min-width:480px) and (max-width: 767px) {}
