@@ -200,7 +200,9 @@
     .price-box {
         margin-bottom: 40px;
     }
-
+    header .fixed-nav{
+        padding-bottom: 0px!important;
+    }
     .features-section {
         padding-bottom: 0;
     }
@@ -226,14 +228,6 @@
         margin-right: 20px;
         width: 200px !important;
         display: inline-block !important;
-    }
-
-    .logo {
-        padding: 13px 0;
-    }
-
-    header .fixed-nav {
-        padding: 0px 20px;
     }
 
     .header-btn a {

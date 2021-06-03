@@ -2,15 +2,107 @@ $(document).ready(function () {
 
     'use strict'
 
+    /* ===== Testimonial Active ===== */
+
+
+    $('.testimonial-img-active').slick({
+
+        slidesToShow: 3,
+
+        slidesToScroll: 1,
+
+        asNavFor: '.testimonial-active',
+
+        dots: false,
+
+        centerMode: true,
+
+        focusOnSelect: true,
+
+        centerPadding: '0px',
+
+        arrows: false,
+
+        responsive: [{
+
+                breakpoint: 1024,
+
+                settings: {
+
+                    slidesToShow: 3,
+
+                    slidesToScroll: 1,
+
+                    infinite: true,
+
+                    dots: false,
+
+                }
+
+    },
+
+            {
+
+                breakpoint: 992,
+
+                settings: {
+
+                    slidesToShow: 3,
+
+                    slidesToScroll: 2
+
+                }
+
+    },
+
+            {
+
+                breakpoint: 767,
+
+                settings: {
+
+                    slidesToShow: 1,
+
+                    slidesToScroll: 1
+
+                }
+
+    },
+
+            {
+
+                breakpoint: 480,
+
+                settings: {
+
+                    slidesToShow: 1,
+
+                    slidesToScroll: 1
+
+                }
+
+    }
+
+    ]
+
+    });
+
+
+    $('.testimonial-active').slick({
+        slidesToShow: 1,
+
+        slidesToScroll: 1,
+
+        arrows: false,
+
+        fade: true,
+
+        asNavFor: '.testimonial-img-active',
+
+    });
+
 
     /* Owl carousel */
-
-
-
-    $.scrollUp();
-
-
-
     $('.brand-active').owlCarousel({
         loop: true,
         autoplay: true,
@@ -36,10 +128,69 @@ $(document).ready(function () {
         }
     });
 
-    /* 	
-    $(".zoom-01").elevateZoom({constrainType:"height", constrainSize:274, zoomType: "lens", containLensZoom: true, gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active"}); 
-     */
+    ////////////////////////////////////////////////////
 
+    // Scroll To Top Js
+
+    function smoothSctollTop() {
+
+        $('.smooth-scroll a').on('click', function (event) {
+
+            var target = $(this.getAttribute('href'));
+
+            if (target.length) {
+
+                event.preventDefault();
+
+                $('html, body').stop().animate({
+
+                    scrollTop: target.offset().top - 0
+
+                }, 1500);
+
+            }
+
+        });
+
+    }
+
+    smoothSctollTop();
+
+
+
+    // Show or hide the sticky footer button
+
+    $(window).on('scroll', function (event) {
+
+        if ($(this).scrollTop() > 600) {
+
+            $('#scroll').fadeIn(200)
+
+        } else {
+
+            $('#scroll').fadeOut(200)
+
+        }
+
+    });
+
+
+
+    //Animate the scroll to yop
+
+    $('#scroll').on('click', function (event) {
+
+        event.preventDefault();
+
+
+
+        $('html, body').animate({
+
+            scrollTop: 0,
+
+        }, 1500);
+
+    });
 
     /* ===== Counter Up Plugin ==== */
 
@@ -53,125 +204,6 @@ $(document).ready(function () {
         type: 'iframe'
 
     });
-
-    /* ===== Testimonial Active ===== */
-
-
-  $('.testimonail-active').slick({
-
-    slidesToShow: 1,
-
-    slidesToScroll: 1,
-
-    arrows: false,
-
-    fade: true,
-
-    asNavFor: '.testimonial-img-active',
-
-  });
-
-  $('.testimonial-img-active').slick({
-
-    slidesToShow: 3,
-
-    slidesToScroll: 1,
-
-    asNavFor: '.testimonail-active',
-
-    dots: false,
-
-    centerMode: true,
-
-    focusOnSelect: true,
-
-    centerPadding: '0px',
-
-    arrows: false,
-
-    responsive: [{
-
-      breakpoint: 1024,
-
-      settings: {
-
-        slidesToShow: 3,
-
-        slidesToScroll: 1,
-
-        infinite: true,
-
-        dots: false,
-
-      }
-
-    },
-
-    {
-
-      breakpoint: 992,
-
-      settings: {
-
-        slidesToShow: 3,
-
-        slidesToScroll: 2
-
-      }
-
-    },
-
-    {
-
-      breakpoint: 767,
-
-      settings: {
-
-        slidesToShow: 1,
-
-        slidesToScroll: 1
-
-      }
-
-    },
-
-    {
-
-      breakpoint: 480,
-
-      settings: {
-
-        slidesToShow: 1,
-
-        slidesToScroll: 1
-
-      }
-
-    }
-
-    ]
-
-  });
-
-
-    //SMOOTH SCROLL
-    // $('.menu li a[href^="#"]').on('click', function(e){
-    // e.preventDefault();
-
-    // var target = $(this.hash);
-
-    // if (target.length) {
-    // $('html, body').stop().animate({
-    // scrollTop: target.offset().top -60
-    // }, 1000);
-    // }
-
-    // });
-
-    /* ===== Wow Active ===== */
-  /*  new WOW().init();
-*/
-
 
 
     /* one Page Nav */
@@ -188,153 +220,6 @@ $(document).ready(function () {
         meanScreenWidth: "991"
     });
 
-
-
-
-    // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 11,
-
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-            // How you would like to style the map. 
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{
-                "featureType": "all",
-                "elementType": "labels.text.fill",
-                "stylers": [{
-                    "saturation": 36
-                }, {
-                    "color": "#000000"
-                }, {
-                    "lightness": 40
-                }]
-            }, {
-                "featureType": "all",
-                "elementType": "labels.text.stroke",
-                "stylers": [{
-                    "visibility": "on"
-                }, {
-                    "color": "#000000"
-                }, {
-                    "lightness": 16
-                }]
-            }, {
-                "featureType": "all",
-                "elementType": "labels.icon",
-                "stylers": [{
-                    "visibility": "off"
-                }]
-            }, {
-                "featureType": "administrative",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 20
-                }]
-            }, {
-                "featureType": "administrative",
-                "elementType": "geometry.stroke",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }, {
-                    "weight": 1.2
-                }]
-            }, {
-                "featureType": "landscape",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 20
-                }]
-            }, {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 21
-                }]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 29
-                }, {
-                    "weight": 0.2
-                }]
-            }, {
-                "featureType": "road.arterial",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 18
-                }]
-            }, {
-                "featureType": "road.local",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 16
-                }]
-            }, {
-                "featureType": "transit",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 19
-                }]
-            }, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#000000"
-                }, {
-                    "lightness": 17
-                }]
-            }]
-        };
-
-        // Get the HTML DOM element that will contain your map 
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-            title: 'Snazzy!'
-        });
-    }
-    
-    
 
 });
 
@@ -358,9 +243,6 @@ questions.forEach(function (question) {
         question.classList.toggle("show-text");
     });
 });
-
-
-
 
 
 
